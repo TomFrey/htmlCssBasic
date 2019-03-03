@@ -2,8 +2,10 @@
 
 ## Voraussetzungen
 + Homebrew ist installiert
-+ yarn ist installiert (brew install yarn)
-+ gulp ist installiert
++ node ist installiert 'node --version'
++ npm ist installiert 'npm --version'
++ yarn ist installiert 'yarn --version' oder dann installieren 'brew install yarn'
++ gulp installieren 'npm install --global gulp-cli'
 
 ## Installation
 + Repositiory clonen (Link auf Github kopieren)
