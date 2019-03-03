@@ -1,0 +1,5 @@
+# Intellij Zeugs ausschliessen
+.idea/
+
+.sass-cache/
+node_modules/
