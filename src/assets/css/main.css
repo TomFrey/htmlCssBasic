@@ -1,2 +1,2 @@
-p {
+p:first-child {
   color: red; }
