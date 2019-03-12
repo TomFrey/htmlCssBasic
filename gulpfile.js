@@ -16,10 +16,10 @@ gulp.task('sass', () => {
 
 
 /**
- * serve task, will launch browserSync and launch index.html files,
- * and watch the changes for html and sass files
+ * serveSass task, will launch browserSync and launch index.html file,
+ * and watches the changes in html and sass files
  */
-gulp.task('serve', gulp.series('sass', () => {
+gulp.task('serveSass', gulp.series('sass', () => {
     browserSync.init({
         server: './src'
     });
@@ -37,10 +37,31 @@ gulp.task('serve', gulp.series('sass', () => {
 
 
 /**
+ * serveCss task, will launch browserSync and launch index.html file,
+ * and watches the changes in html and css files
+ */
+gulp.task('serveCss', () => {
+    browserSync.init({
+        server: './src'
+    });
+
+    /**
+     * watch for changes in css files
+     */
+    gulp.watch('./src/assets/css/**/*.css').on('change', browserSync.reload);
+
+    /**
+     * watch for changes in html files
+     */
+    gulp.watch('./src/*.html').on('change', browserSync.reload);
+});
+
+
+/**
  * Default task, running just `gulp` will compile the sass,
  * compile the site, launch BrowserSync then watch
  * files for changes
  */
-gulp.task('default', gulp.parallel('serve'), () => {});
+gulp.task('default', gulp.parallel('serveCss'), () => {});
 
 
