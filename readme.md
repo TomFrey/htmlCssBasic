@@ -10,6 +10,7 @@
 ## Installation
 + Repositiory clonen (Link auf Github kopieren)
 + git clone {Link}
++ cd htmlCssBasic
 + rm -rf node_modules
 + yarn install
 + gulp (Startet den Webserver unter http://localhost:3000)
